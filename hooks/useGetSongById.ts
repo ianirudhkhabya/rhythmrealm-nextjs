@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useSessionContext } from "@supabase/auth-helpers-react";
 
-import { Song } from "@/types";
+import { Song } from "@/types/types";
 
-const useGetSongById = (id?: string) => {
+const useSongById = (id?: string) => {
   const [isLoading, setIsLoading] = useState(false);
   const [song, setSong] = useState<Song | undefined>(undefined);
   const { supabaseClient } = useSessionContext();
@@ -44,4 +44,4 @@ const useGetSongById = (id?: string) => {
   );
 };
 
-export default useGetSongById;
+export default useSongById;

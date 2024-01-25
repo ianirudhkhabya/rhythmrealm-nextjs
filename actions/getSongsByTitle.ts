@@ -1,6 +1,8 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
-import { Song } from "@/types";
+import { cookies, headers } from "next/headers";
+
+import { Song } from "@/types/types";
+
 import getSongs from "./getSongs";
 
 const getSongsByTitle = async (title: string): Promise<Song[]> => {
@@ -20,7 +22,7 @@ const getSongsByTitle = async (title: string): Promise<Song[]> => {
     .order("created_at", { ascending: false });
 
   if (error) {
-    throw error;
+    console.error(error.message);
   }
 
   return (data as any) || [];
