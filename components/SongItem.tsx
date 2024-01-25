@@ -47,9 +47,11 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
       >
         <Image
           className="object-cover"
-          src={imagePath || "https://shorturl.at/swRY8"}
+          src={imagePath || "https://shorturl.at/cyzNV"}
           fill
           alt="Image"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
         />
       </div>
       <div className="flex flex-col items-start w-full pt-4 gap-y-1">

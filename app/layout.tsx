@@ -28,9 +28,9 @@ export const metadata: Metadata = {
       type: "image/png",
     },
   },
-  metadataBase: new URL("https://localhost:3000/"),
+  metadataBase: new URL("https://spotify-clone-anirudh.vercel.app/"),
   openGraph: {
-    url: "https://localhost:3000/",
+    url: "https://spotify-clone-anirudh.vercel.app/",
     title: "Spotify Clone",
     description: "Listen to your favorite music for free",
     type: "website",
